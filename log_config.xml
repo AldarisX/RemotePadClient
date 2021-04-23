@@ -1,0 +1,14 @@
+<blog4go minlevel="trace">
+	<filter levels="trace">
+		<rotatefile path="logs/trace.log" type="time"></rotatefile>
+	</filter>
+	<filter levels="debug" colored="true">
+		<file path="logs/debug.log"></file>
+	</filter>
+	<filter levels="info" colored="true">
+		<file path="logs/info.log"></file>
+	</filter>
+	<filter levels="error,critical">
+		<rotatefile path="logs/error.log" type="size" rotateSize="50000000" rotateLines="8000000"></rotatefile>
+	</filter>
+</blog4go>
