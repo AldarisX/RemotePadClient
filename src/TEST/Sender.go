@@ -14,7 +14,7 @@ import (
 var testMode = flag.String("test", "0", "测试模式")
 
 func main() {
-	var xbox bool = false
+	// var xbox bool = false
 	flag.Parse()
 
 	common.Connect()
@@ -22,7 +22,7 @@ func main() {
 	time.Sleep(time.Duration(4) * time.Second)
 
 	common.UseXbox360()
-	xbox = true
+	// xbox = true
 
 	time.Sleep(time.Duration(5) * time.Second)
 
@@ -52,18 +52,18 @@ func main() {
 	common.SendBtn(common.PadBtn_DDOWN, 1)
 
 	if *testMode == "1" {
-		go func() {
-			for {
-				if rand.Intn(100) < 10 {
-					if xbox {
-						common.UseDS4()
-					} else {
-						common.UseXbox360()
-					}
-				}
-				time.Sleep(time.Duration(10) * time.Second)
-			}
-		}()
+		// go func() {
+		// 	for {
+		// 		if rand.Intn(100) < 10 {
+		// 			if xbox {
+		// 				common.UseDS4()
+		// 			} else {
+		// 				common.UseXbox360()
+		// 			}
+		// 		}
+		// 		time.Sleep(time.Duration(10) * time.Second)
+		// 	}
+		// }()
 
 		go func() {
 			for {
