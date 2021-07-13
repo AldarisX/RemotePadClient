@@ -31,6 +31,7 @@ var pwd = flag.String("pwd", "123456", "驱动端密码")
 var spwd = flag.String("spwd", "654321", "服务端密码")
 var mode = flag.String("m", "xbox", "模拟模式")
 var order = flag.String("order", "false", "字节序")
+var testMode = flag.String("test", "0", "测试模式")
 
 // optionally set user defined hook for logging
 type ConsoleHook struct {

@@ -237,7 +237,7 @@ func main() {
 
 	controller.On(gods4.EventR3Release, func(data interface{}) error {
 		log.Infof("* Controller #1 | %-10s | state: release\n", "R3")
-		common.SendBtn(common.PadBtn_L3, 0)
+		common.SendBtn(common.PadBtn_R3, 0)
 		return nil
 	})
 
